@@ -10,8 +10,9 @@ public class Traps : MonoBehaviour
     {
         if (collision.CompareTag("Pushable"))
         {
-            //Call on reset function in the gameobject
-            
+            //Destroy(collision.gameObject); //this code would be to destroy the object (and lose the game/level)
+            Debug.Log("Position reset");
+            collision.GetComponent<PushableObject>().ResetUponDamage(); //Should reset it's pos
         }
     }
 }
