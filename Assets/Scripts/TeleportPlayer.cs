@@ -10,7 +10,6 @@ public class TeleportPlayer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("E pressed");
             if(currentPortal != null)
             {
                 Debug.Log("Player teleported");
