@@ -5,9 +5,13 @@ using UnityEngine;
 public class Wall : MonoBehaviour
 {
     [SerializeField] private Transform _newPos;
+    [SerializeField] int _moveSpeed = 25;
 
-    public void BtnPressed()
+    public void MoveSelf()
     {
-        Debug.Log("Move wall");
+        transform.position = Vector3.MoveTowards(transform.position, _newPos.position, _moveSpeed * Time.deltaTime); //_newPos.position
     }
+
+
+
 }

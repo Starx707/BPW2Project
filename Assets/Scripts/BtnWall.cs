@@ -4,37 +4,23 @@ using UnityEngine;
 
 public class BtnWall : MonoBehaviour
 {
-    private bool _nearButton = false;
+    //private bool _nearButton = false;
     [SerializeField] private GameObject _AssignedWall;
+    bool _moveWall = false;
 
-    // Update is called once per frame
-    void Update()
+
+    public void BtnPressed()
     {
-        if (Input.GetKeyDown(KeyCode.E)) //this chunk needs to go to the player to call a function that calls onto the wall script to move that wall
-        {
-            if (_nearButton)
-            {
-                Debug.Log("Button pressed");
-                Debug.Log(_nearButton);
-                //Call button pressed function in wall script
-                //_AssignedWall.GetComponent<Wall>().BtnPressed();
-            }
-        }
+        Debug.Log("Wall will move");
+        _moveWall = true;
+        MoveWall();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void MoveWall()
     {
-        if (collision.GetComponent<Player>())
+        if (_moveWall)
         {
-            _nearButton = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.GetComponent<Player>())
-        {
-            _nearButton = false;
+            _AssignedWall.GetComponent<Wall>().MoveSelf();
         }
     }
 }
