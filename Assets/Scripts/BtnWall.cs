@@ -11,7 +11,6 @@ public class BtnWall : MonoBehaviour
 
     public void BtnPressed()
     {
-        Debug.Log("Wall will move");
         _moveWall = true;
         MoveWall();
     }
