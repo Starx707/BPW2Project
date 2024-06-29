@@ -12,7 +12,22 @@ public class GameManager : MonoBehaviour
 
     public void NextLvl() //Add if statement/loop
     {
-        SceneManager.LoadSceneAsync(""); //All levels
+        if (Lvl1)
+        {
+            SceneManager.LoadSceneAsync(""); //All levels
+        }
+        else if (Lvl2)
+        {
+            SceneManager.LoadSceneAsync(""); //All levels
+        }
+        else if (Lvl3)
+        {
+            SceneManager.LoadSceneAsync(""); //All levels
+        }
+        else if (Lvl4)
+        {
+            SceneManager.LoadSceneAsync(""); //All levels
+        }
     }
 
     public void GameClear()

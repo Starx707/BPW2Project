@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetKey(KeyCode.E)) //this chunk needs to go to the player to call a function that calls onto the wall script to move that wall
         {
             if (_nearButton)
@@ -26,6 +25,10 @@ public class Player : MonoBehaviour
         if (collision.GetComponent<BtnWall>())
         {
             _nearButton = true;
+        }
+        else if (collision.GetComponent<EndingPortal>())
+        {
+            collision.GetComponent<EndingPortal>().CloseGame();
         }
     }
 

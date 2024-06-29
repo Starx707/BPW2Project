@@ -7,8 +7,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private Rigidbody2D _rb;
     Vector2 _movement;
-    private SpriteRenderer _MySpriteRenderer;
 
+
+    private SpriteRenderer _MySpriteRenderer;
     [SerializeField] Animator _animator;
 
     private void Start()
@@ -37,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
             _MySpriteRenderer.flipX = false;
         }
     }
-  
 
     //private float horizontal;
     //[SerializeField] private float _speed = 8f;
