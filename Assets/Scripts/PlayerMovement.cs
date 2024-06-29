@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     Vector2 _movement;
     private SpriteRenderer _MySpriteRenderer;
 
+    [SerializeField] Animator _animator;
+
     private void Start()
     {
         _MySpriteRenderer = GetComponent<SpriteRenderer>();
@@ -18,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         _movement.x = Input.GetAxisRaw("Horizontal");
+
+        _animator.SetFloat("Horizontal", _movement.x);
+        _animator.SetFloat("Speed", _movement.sqrMagnitude);
     }
 
     private void FixedUpdate()

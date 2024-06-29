@@ -2255,8 +2255,8 @@ Tilemap:
   - first: {x: 7, y: -5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileIndex: 14
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2265,8 +2265,8 @@ Tilemap:
   - first: {x: 10, y: -5, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileIndex: 13
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2640,7 +2640,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 41487970d31034247b27f5ae475659df, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 17274a5aebde746e4a0b0b366e172ad5, type: 2}
-  - m_RefCount: 38
+  - m_RefCount: 36
     m_Data: {fileID: 11400000, guid: 2315be442aea24f5f9527482436c22ac, type: 2}
   - m_RefCount: 42
     m_Data: {fileID: 11400000, guid: 6bb5f47cd47344d5fa10fd89d4b46b64, type: 2}
@@ -2660,6 +2660,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: eecf86476a2a348dd966c82b307b447f, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 16f11379c36674e0580884f4186af6b3, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 0c30ca26c044e42c08467642f8a72bb9, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 760b38ea60cdc496da397813880b1952, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: -691949865, guid: 803bd6178224e49a6ba507c870d1e2b0, type: 3}
@@ -2667,7 +2671,7 @@ Tilemap:
     m_Data: {fileID: -2073030097, guid: 803bd6178224e49a6ba507c870d1e2b0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -2028629097, guid: 803bd6178224e49a6ba507c870d1e2b0, type: 3}
-  - m_RefCount: 38
+  - m_RefCount: 36
     m_Data: {fileID: -1703659577, guid: c361eb0ead595426db9aa8881921b436, type: 3}
   - m_RefCount: 42
     m_Data: {fileID: 462783664, guid: c361eb0ead595426db9aa8881921b436, type: 3}
@@ -2687,6 +2691,10 @@ Tilemap:
     m_Data: {fileID: 351216417, guid: 803bd6178224e49a6ba507c870d1e2b0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1375386309, guid: 803bd6178224e49a6ba507c870d1e2b0, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1262059107, guid: c361eb0ead595426db9aa8881921b436, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1545069466, guid: c361eb0ead595426db9aa8881921b436, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 108
     m_Data:
@@ -3098,6 +3106,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b1ebbbbc840442b8918ab16a6493e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Lvl1: 0
+  Lvl2: 0
+  Lvl3: 0
+  Lvl4: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -11877,6 +11889,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destination: {fileID: 1711880120}
+  _isEndPortal: 0
+  _gm: {fileID: 889106905}
 --- !u!1 &1327468777
 GameObject:
   m_ObjectHideFlags: 0
@@ -12795,6 +12809,7 @@ GameObject:
   - component: {fileID: 1477318157}
   - component: {fileID: 1477318159}
   - component: {fileID: 1477318160}
+  - component: {fileID: 1477318161}
   m_Layer: 0
   m_Name: PortalE-1
   m_TagString: Portal
@@ -12875,6 +12890,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef85881c9a50a4974b9647161f78da9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1477318161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477318156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89a9d344f7ed4d5f8b598e98d055e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destination: {fileID: 0}
+  _isEndPortal: 1
+  _gm: {fileID: 889106905}
 --- !u!1 &1517877872
 GameObject:
   m_ObjectHideFlags: 0
@@ -13036,6 +13066,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destination: {fileID: 1235439171}
+  _isEndPortal: 0
+  _gm: {fileID: 889106905}
 --- !u!1 &1726319641
 GameObject:
   m_ObjectHideFlags: 0
@@ -26312,6 +26344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 5
   _rb: {fileID: 1872498036}
+  _animator: {fileID: 1872498042}
 --- !u!114 &1872498040
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] bool Lvl1;
+    [SerializeField] bool Lvl2;
+    [SerializeField] bool Lvl3;
+    [SerializeField] bool Lvl4;
+
+    public void NextLvl() //Add if statement/loop
     {
-        
+        SceneManager.LoadSceneAsync(""); //All levels
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GameClear()
     {
-        
+        SceneManager.LoadSceneAsync(""); //Ending game scene
     }
 }
