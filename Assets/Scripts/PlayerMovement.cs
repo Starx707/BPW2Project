@@ -7,6 +7,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private Rigidbody2D _rb;
     Vector2 _movement;
+    private SpriteRenderer _MySpriteRenderer;
+
+    private void Start()
+    {
+        _MySpriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,6 +23,14 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         _rb.MovePosition(_rb.position + _movement * _moveSpeed * Time.fixedDeltaTime);
+        if (_movement.x == -1)
+        {
+            _MySpriteRenderer.flipX = true;
+        }
+        if (_movement.x == 1)
+        {
+            _MySpriteRenderer.flipX = false;
+        }
     }
   
 
