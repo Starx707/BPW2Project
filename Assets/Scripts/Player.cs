@@ -5,9 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private bool _nearButton = false;
+    private bool _inFrontOfDoor = false;
     [SerializeField] private GameObject _connectedBtn;
     [SerializeField] private GameManager _gm;
     [SerializeField] private GameObject _UIManger;
+    [SerializeField] private GameObject _door;
 
     // Update is called once per frame
     void Update()
@@ -27,6 +29,10 @@ public class Player : MonoBehaviour
             {
                 //Call button pressed function in wall script
                 _connectedBtn.GetComponent<BtnWall>().PlayAudio();
+            }
+            if (_inFrontOfDoor)
+            {
+                _door.GetComponent<NextLvlDoor>().InteractDoor();
             }
         }
 
@@ -69,6 +75,10 @@ public class Player : MonoBehaviour
         else if (collision.GetComponent<EndingPortal>())
         {
             collision.GetComponent<EndingPortal>().CloseGame();
+        }
+        else if (collision.GetComponent<NextLvlDoor>())
+        {
+            _inFrontOfDoor = true;
         }
     }
 

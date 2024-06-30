@@ -9,6 +9,10 @@ public class NextLvlDoor : MonoBehaviour
     [SerializeField] bool _fakeDoor;
     [SerializeField] private GameManager _gm;
 
+    [Header("------ SFX ------")]
+    [SerializeField] GameObject _audioM;
+    [SerializeField] AudioClip _doorOpen;
+
     public void InteractDoor()
     {
         if (_fakeDoor)
@@ -18,6 +22,7 @@ public class NextLvlDoor : MonoBehaviour
         else
         {
             //open door sfx
+            _audioM.GetComponent<AudioController>().PlaySFX(_doorOpen);
             _gm.GetComponent<GameManager>().NextLvl();
         }
     }

@@ -20,17 +20,13 @@ public class GameManager : MonoBehaviour
     {
         if (Lvl1)
         {
-            SceneManager.LoadSceneAsync(""); //All levels
+            SceneManager.LoadSceneAsync("Level2"); //All levels
         }
         else if (Lvl2)
         {
             SceneManager.LoadSceneAsync(""); //All levels
         }
         else if (Lvl3)
-        {
-            SceneManager.LoadSceneAsync(""); //All levels
-        }
-        else if (Lvl4)
         {
             SceneManager.LoadSceneAsync(""); //All levels
         }
@@ -44,21 +40,21 @@ public class GameManager : MonoBehaviour
         }
         else if (Lvl2)
         {
-            SceneManager.LoadSceneAsync(""); //All levels
+            SceneManager.LoadSceneAsync("Level2"); //All levels
         }
         else if (Lvl3)
         {
-            SceneManager.LoadSceneAsync(""); //All levels
+            SceneManager.LoadSceneAsync("Level3"); //All levels
         }
         else if (Lvl4)
         {
-            SceneManager.LoadSceneAsync(""); //All levels
+            SceneManager.LoadSceneAsync("Level4"); //All levels
         }
     }
 
     public void GameClear()
     {
-        SceneManager.LoadSceneAsync(""); //Ending game scene
+        SceneManager.LoadSceneAsync("EndingScreen"); 
     }
 
     public void ToMainMenu()

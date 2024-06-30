@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PushableObject : MonoBehaviour
 {
-    // Gotten hit (public)
-    // Reset position
     private GameObject _currentPortal;
     private bool _timeOut = false;
+
+    [Header("------ SFX ------")]
+    [SerializeField] GameObject _audioM;
+    [SerializeField] AudioClip _SlimePerish;
+    [SerializeField] AudioClip _SlimeTeleport;
 
     [SerializeField] private Transform _startPoint;
 
@@ -19,6 +22,7 @@ public class PushableObject : MonoBehaviour
             if (_currentPortal != null && _timeOut == false)
             {
                 Debug.Log("Cube teleported");
+                _audioM.GetComponent<AudioController>().PlaySFX2(_SlimeTeleport);
                 transform.position = _currentPortal.GetComponent<Portal>().GetDestination().position;
                 _timeOut = true;
             }
@@ -39,6 +43,7 @@ public class PushableObject : MonoBehaviour
 
     public void ResetUponDamage()
     {
+        _audioM.GetComponent<AudioController>().PlaySFX2(_SlimePerish);
         transform.position = _startPoint.position;
     }
 }

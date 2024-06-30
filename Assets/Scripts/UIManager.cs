@@ -38,4 +38,14 @@ public class UIManager : MonoBehaviour
     {
         _controllsPanel.SetActive(false);
     }
+
+    public void StartGame()
+    {
+        SceneManager.LoadSceneAsync("Level1");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
