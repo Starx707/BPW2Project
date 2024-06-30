@@ -8,6 +8,7 @@ TagManager:
   - Pushable
   - Background
   - Traps
+  - Audio
   layers:
   - Default
   - TransparentFX

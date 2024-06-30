@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private Rigidbody2D _rb;
     Vector2 _movement;
 
-
+    [Header("Animation")]
     private SpriteRenderer _MySpriteRenderer;
     [SerializeField] Animator _animator;
 

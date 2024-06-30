@@ -9,12 +9,20 @@ public class BtnWall : MonoBehaviour
     bool _moveWall = false;
     [SerializeField] private Transform _transformGear;
 
+    [Header("------ SFX ------")]
+    [SerializeField] AudioController _audioM;
+    [SerializeField] AudioClip _heavyGear;
+
+    private void Awake()
+    {
+        //_audioM = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager_A>();
+    }
 
     public void BtnPressed()
     {
         _moveWall = true;
         MoveWall();
-        //Rotate image sprite/button
+        _audioM.PlaySFX(_heavyGear);
         _transformGear.Rotate(0, 0f, _transformGear.rotation.z + 1);
     }
 
