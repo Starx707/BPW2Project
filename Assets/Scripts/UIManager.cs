@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject _creditsPanel;
+    [SerializeField] private GameObject _controllsPanel;
 
     bool _creditsShown;
 
@@ -28,4 +29,13 @@ public class UIManager : MonoBehaviour
        _creditsPanel.SetActive(false);
     }
 
+    public void RevealControlls()
+    {
+        _controllsPanel.SetActive(true);
+    }
+
+    public void HideControlls()
+    {
+        _controllsPanel.SetActive(false);
+    }
 }

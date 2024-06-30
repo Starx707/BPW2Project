@@ -10,11 +10,36 @@ public class GameManager : MonoBehaviour
     [SerializeField] bool Lvl3;
     [SerializeField] bool Lvl4;
 
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
+
     public void NextLvl() //Add if statement/loop
     {
         if (Lvl1)
         {
             SceneManager.LoadSceneAsync(""); //All levels
+        }
+        else if (Lvl2)
+        {
+            SceneManager.LoadSceneAsync(""); //All levels
+        }
+        else if (Lvl3)
+        {
+            SceneManager.LoadSceneAsync(""); //All levels
+        }
+        else if (Lvl4)
+        {
+            SceneManager.LoadSceneAsync(""); //All levels
+        }
+    }
+
+    public void ResetLvl()
+    {
+        if (Lvl1)
+        {
+            SceneManager.LoadSceneAsync("Level1"); //All levels
         }
         else if (Lvl2)
         {

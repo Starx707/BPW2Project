@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     private bool _nearButton = false;
     [SerializeField] private GameObject _connectedBtn;
+    [SerializeField] private GameManager _gm;
+    [SerializeField] private GameObject _UIManger;
 
     // Update is called once per frame
     void Update()
@@ -17,6 +19,20 @@ public class Player : MonoBehaviour
                 //Call button pressed function in wall script
                 _connectedBtn.GetComponent<BtnWall>().BtnPressed();
             }
+        }
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            _gm.GetComponent<GameManager>().ResetLvl();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            _UIManger.GetComponent<UIManager>().RevealControlls();
+        }
+        else if (Input.GetKeyUp(KeyCode.Q))
+        {
+            _UIManger.GetComponent<UIManager>().HideControlls();
         }
     }
 
