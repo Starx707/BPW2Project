@@ -30,5 +30,13 @@ public class AudioController : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip);
+        SFXSource.PlayDelayed(5);
+    }
+
+    public void PlaySFX2(AudioClip clip)
+    {
+        SFXSource.PlayDelayed(5);
+        SFXSource.PlayOneShot(clip);
+        SFXSource.PlayDelayed(5);
     }
 }

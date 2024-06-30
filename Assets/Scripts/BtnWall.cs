@@ -10,19 +10,31 @@ public class BtnWall : MonoBehaviour
     [SerializeField] private Transform _transformGear;
 
     [Header("------ SFX ------")]
-    [SerializeField] AudioController _audioM;
+    [SerializeField] GameObject _audioM;
     [SerializeField] AudioClip _heavyGear;
+    bool _playAudio;
 
-    private void Awake()
+
+    public void PlayAudio()
     {
-        //_audioM = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager_A>();
+        _playAudio = true;
+        if (_playAudio)
+        {
+            _audioM.GetComponent<AudioController>().PlaySFX(_heavyGear);
+        }
     }
+
+    //Kindaaa bullshi 0w0
+    //public void ResetAudio()
+    //{
+    //    _playAudio = false;
+    //}
 
     public void BtnPressed()
     {
         _moveWall = true;
+        _playAudio = true;
         MoveWall();
-        _audioM.PlaySFX(_heavyGear);
         _transformGear.Rotate(0, 0f, _transformGear.rotation.z + 1);
     }
 

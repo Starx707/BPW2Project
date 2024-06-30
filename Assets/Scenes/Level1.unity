@@ -4858,9 +4858,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 423489498858018962, guid: ba034841be9ff4e3b847bb35582d821c, type: 3}
+      propertyPath: _audioM
+      value: 
+      objectReference: {fileID: 1135452547}
+    - target: {fileID: 423489498858018962, guid: ba034841be9ff4e3b847bb35582d821c, type: 3}
       propertyPath: _animator
       value: 
       objectReference: {fileID: 1112057662}
+    - target: {fileID: 423489498858018962, guid: ba034841be9ff4e3b847bb35582d821c, type: 3}
+      propertyPath: _SlimePush
+      value: 
+      objectReference: {fileID: 8300000, guid: a3ae0b040eaf843f09c0fa23e60dcddd, type: 3}
     - target: {fileID: 3556910977326447496, guid: ba034841be9ff4e3b847bb35582d821c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.92
@@ -4900,6 +4908,18 @@ PrefabInstance:
     - target: {fileID: 3556910977326447496, guid: ba034841be9ff4e3b847bb35582d821c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334840437745579509, guid: ba034841be9ff4e3b847bb35582d821c, type: 3}
+      propertyPath: m_Radius
+      value: 0.6348964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334840437745579509, guid: ba034841be9ff4e3b847bb35582d821c, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.6547812
+      objectReference: {fileID: 0}
+    - target: {fileID: 4334840437745579509, guid: ba034841be9ff4e3b847bb35582d821c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7797843097333757320, guid: ba034841be9ff4e3b847bb35582d821c, type: 3}
       propertyPath: _startPoint
@@ -5052,7 +5072,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _AssignedWall: {fileID: 1920334143}
   _transformGear: {fileID: 1114357265}
-  _audioM: {fileID: 1135452549}
+  _audioM: {fileID: 1135452547}
+  _heavyGear: {fileID: 8300000, guid: 5144bdf3148bb4ac889ad154d33efdc7, type: 3}
 --- !u!58 &1114357269
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5131,7 +5152,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1135452547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a41352ae7e5042949cb087e87b08552, type: 3}
+  m_Script: {fileID: 11500000, guid: 4442b598862f147bb933da60f3e1e395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 2043179517}
@@ -28846,6 +28867,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b9238ab7bd9473285c7d901afb9706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioM: {fileID: 1135452547}
+  _TeleportPlayer: {fileID: 8300000, guid: 8c3b19d83a6124963ab17dbcad5591fc, type: 3}
 --- !u!114 &1872498041
 MonoBehaviour:
   m_ObjectHideFlags: 0

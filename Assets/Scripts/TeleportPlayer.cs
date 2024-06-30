@@ -6,6 +6,10 @@ public class TeleportPlayer : MonoBehaviour
 {
     private GameObject currentPortal;
 
+    [Header("------ SFX ------")]
+    [SerializeField] GameObject _audioM;
+    [SerializeField] AudioClip _TeleportPlayer;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -14,6 +18,7 @@ public class TeleportPlayer : MonoBehaviour
             {
                 Debug.Log("Player teleported");
                 transform.position = currentPortal.GetComponent<Portal>().GetDestination().position;
+                _audioM.GetComponent<AudioController>().PlaySFX(_TeleportPlayer);
             }
         }
     }

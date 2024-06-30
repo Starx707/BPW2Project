@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E)) //this chunk needs to go to the player to call a function that calls onto the wall script to move that wall
+        if (Input.GetKey(KeyCode.E)) 
         {
             if (_nearButton)
             {
@@ -20,6 +20,25 @@ public class Player : MonoBehaviour
                 _connectedBtn.GetComponent<BtnWall>().BtnPressed();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (_nearButton)
+            {
+                //Call button pressed function in wall script
+                _connectedBtn.GetComponent<BtnWall>().PlayAudio();
+            }
+        }
+
+        //Is kinda bullshi 0w0
+        //if (Input.GetKeyUp(KeyCode.E))
+        //{
+        //    if (_nearButton)
+        //    {
+        //        //Call button pressed function in wall script
+        //        _connectedBtn.GetComponent<BtnWall>().ResetAudio();
+        //    }
+        //}
 
         if (Input.GetKey(KeyCode.R))
         {
