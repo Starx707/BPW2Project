@@ -17,6 +17,7 @@ public class NextLvlDoor : MonoBehaviour
         }
         else
         {
+            //open door sfx
             _gm.GetComponent<GameManager>().NextLvl();
         }
     }

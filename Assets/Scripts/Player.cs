@@ -34,6 +34,11 @@ public class Player : MonoBehaviour
         {
             _UIManger.GetComponent<UIManager>().HideControlls();
         }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            _gm.GetComponent<GameManager>().ToMainMenu();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

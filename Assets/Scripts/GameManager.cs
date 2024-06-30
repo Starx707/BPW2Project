@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [Header ("---- Level select ---")]
     [SerializeField] bool Lvl1;
     [SerializeField] bool Lvl2;
     [SerializeField] bool Lvl3;
@@ -58,5 +59,10 @@ public class GameManager : MonoBehaviour
     public void GameClear()
     {
         SceneManager.LoadSceneAsync(""); //Ending game scene
+    }
+
+    public void ToMainMenu()
+    {
+        SceneManager.LoadSceneAsync("MainMenu");
     }
 }
