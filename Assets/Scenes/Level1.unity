@@ -3377,7 +3377,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The sewers preven you from falling through. \nSlimes slip past this however."
+  m_text: "The sewers prevenT you from falling through. \nSlimes slip past this however."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2a33189e2676b4aad98c8b19d6b016af, type: 2}
   m_sharedMaterial: {fileID: -2659548907972307561, guid: 2a33189e2676b4aad98c8b19d6b016af, type: 2}
@@ -5046,7 +5046,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start moving by using WASD and get to the door of each level!
+  m_text: Start moving by using A & D (WASD) and get to the door of each level!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2a33189e2676b4aad98c8b19d6b016af, type: 2}
   m_sharedMaterial: {fileID: -2659548907972307561, guid: 2a33189e2676b4aad98c8b19d6b016af, type: 2}
