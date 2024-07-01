@@ -24,11 +24,11 @@ public class GameManager : MonoBehaviour
         }
         else if (Lvl2)
         {
-            SceneManager.LoadSceneAsync(""); //All levels
+            SceneManager.LoadSceneAsync("Level3"); //All levels
         }
         else if (Lvl3)
         {
-            SceneManager.LoadSceneAsync(""); //All levels
+            SceneManager.LoadSceneAsync("Level4"); //All levels
         }
     }
 

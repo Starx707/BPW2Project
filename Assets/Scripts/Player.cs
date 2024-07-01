@@ -6,10 +6,12 @@ public class Player : MonoBehaviour
 {
     private bool _nearButton = false;
     private bool _inFrontOfDoor = false;
+    private bool _inFrontOfEndPortal = false;
     [SerializeField] private GameObject _connectedBtn;
     [SerializeField] private GameManager _gm;
     [SerializeField] private GameObject _UIManger;
     [SerializeField] private GameObject _door;
+    [SerializeField] private GameObject _endPortal;
 
     // Update is called once per frame
     void Update()
@@ -33,6 +35,10 @@ public class Player : MonoBehaviour
             if (_inFrontOfDoor)
             {
                 _door.GetComponent<NextLvlDoor>().InteractDoor();
+            }
+            if (_inFrontOfEndPortal)
+            {
+                _gm.GetComponent<GameManager>().GameClear();
             }
         }
 
@@ -79,6 +85,10 @@ public class Player : MonoBehaviour
         else if (collision.GetComponent<NextLvlDoor>())
         {
             _inFrontOfDoor = true;
+        }
+        else if (collision.GetComponent<PortalEnd>())
+        {
+            _inFrontOfEndPortal = true;
         }
     }
 
